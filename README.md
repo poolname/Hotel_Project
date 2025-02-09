@@ -1,2 +1,3 @@
-# Jmalone03
-말론 3번째 프로젝트
+# Hotel Project
+
+호텔 프로젝트
