@@ -1,0 +1,67 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 5px;
+
+    button {
+        width: 25px;
+        height: 25px;
+        border: none;
+        cursor: pointer;
+
+        /* 이동 버튼(이미지 사용) */
+        &.first,
+        &.prev,
+        &.next,
+        &.last {
+            background-image: url("../../public/img/common/bg_pageination.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &.first {
+                background-position: 0 0; /* 첫 번째 버튼 이미지 */
+            }
+
+            &.prev {
+                background-position: 0 -25px; /* 두 번째 버튼 이미지 */
+            }
+
+            &.next {
+                background-position: 0 -50px; /* 세 번째 버튼 이미지 */
+            }
+
+            &.last {
+                background-position: 0 -75px; /* 네 번째 버튼 이미지 */
+            }
+
+            /* 이동 버튼 글자 숨기기 */
+            color: transparent;
+            text-indent: -9999px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+
+//    숫자페이지버튼
+    .page {
+        width: 25px;
+        height: 25px;
+        // background-color: transparent; 
+        background-image: none;
+        text-align: center;
+        line-height: 25px;
+        cursor: pointer;
+        color: #333; 
+        font-size: 14px; 
+        font-weight: bold;
+
+        /* 활성화된 페이지 */
+        &.active {
+            background-color: grey; 
+            color: #ffffff;
+            border-radius: 4px;
+        }
+    }
+}

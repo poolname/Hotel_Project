@@ -1,0 +1,143 @@
+.cont5 {
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .list {
+        .listwrapper {
+            // padding: 30px 20px;
+            // height: 500px;
+            // background-color: #fff;
+            border-radius: 5px;
+            // font-weight: bold;
+            // padding: 20px 0;
+
+            & > .btn-wrap {
+                justify-content: end;
+                .submit {
+                    padding: 10px;
+                    background: #333;
+                    color: #fff;
+                    border-radius: 4px;
+                }
+            }
+        }
+        .option {
+            padding-top: 0px;
+        }
+        .r-table {
+            width: 100%;
+            // table-layout: fixed;
+            height: auto;
+            // display: flex;
+            // justify-content: space-around;
+            // flex-direction: column;
+            // border-top: 1px solid #ddd;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            // border-bottom: 1px solid #333;
+            // padding-bottom: 20px;
+            margin: 10px 0 30px 0;
+            background-color: #fff;
+            .r-row {
+                width: 100%;
+                font-weight: bold;
+                // line-height: 70px;
+                border-bottom: 1px solid #ddd;
+                .N-title {
+                    width: 80px;
+                    padding: 10px;
+                    background-color: #777;
+                    color: #fff;
+                    text-align: center;
+                }
+                .N-con {
+                    // display: inline-block;
+                    width: calc(100% - 80px);
+                    // text-align: center;
+                    padding: 10px;
+                    // margin: 25px 5px;
+                    font-weight: bold;
+                    color: #333;
+                    .filename {
+                        padding: 10px 0;
+                    }
+                    .title,
+                    .file {
+                        width: 100%;
+                        padding: 5px;
+                        border: 1px solid #ccc;
+                    }
+                    .area {
+                        padding: 5px;
+                        border: 1px solid #ccc;
+                        height: 200px;
+                        width: 100%;
+                        overflow-y: auto;
+                    }
+                }
+                .areabox {
+                    padding: 10px;
+                }
+                .fileup {
+                    width: 80px;
+                    padding: 10px;
+                    text-align: center;
+                    color: #fff;
+                    background-color: #777;
+                }
+                .N-type {
+                    padding: 10px;
+                    // font-weight: 500;
+                    .category {
+                        width: 100px;
+                        padding: 4px;
+                        border: 1px solid #ccc;
+                        color: #333;
+                    }
+                }
+            }
+        }
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            text-align: center;
+            // padding: 10px;
+            // border-radius: 4px;
+            box-sizing: border-box;
+            .cancel {
+                // box-sizing: border-box;
+                background: #fff;
+                color: #333;
+                border: 1px solid #ddd;
+                width: 62px;
+                padding: 5px 10px;
+                line-height: 2;
+                border-radius: 4px;
+                margin-right: 10px;
+                transition: background-color 0.3s;
+                &:hover {
+                    background-color: #efefef;
+                }
+            }
+            .submit {
+                // box-sizing: border-box;
+                background: #333;
+                color: #fff;
+                border: 1px solid #333;
+                width: 62px;
+                padding: 5px 10px;
+                line-height: 2;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+                &:hover {
+                    background-color: #555;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

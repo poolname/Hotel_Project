@@ -1,0 +1,120 @@
+.tab-cont-wrap {
+  ul.tab-cont {
+    display: flex; // 가로 정렬
+    flex-direction: column;
+    gap: 20px;
+
+    li {
+      display: flex; // 이미지와 텍스트, 가격과 버튼 가로 정렬
+      align-items: center; // 세로 정렬
+      justify-content: space-between; // 좌우 정렬
+      padding: 20px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+
+      .box-wrap {
+        display: flex; // 이미지와 텍스트 정렬
+        gap: 20px;
+      }
+
+      .l-box {
+        display: flex; // 이미지와 텍스트 가로 정렬
+        gap: 16px; 
+
+        .img-wrap {
+          flex-shrink: 0; // 이미지 크기 고정
+          img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover; // 이미지 비율 유지
+            border-radius: 8px;
+          }
+        }
+
+        .txt-wrap {
+          display: flex;
+          flex-direction: column; // 텍스트 세로 정렬
+          gap: 8px;
+
+          .badge {
+            font-size: 14px;
+            color: #fff;
+            background-color: #8b5c3e;
+            padding: 4px 8px;
+            border-radius: 4px;
+          }
+
+          .tit {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+          }
+
+          .desc {
+            font-size: 14px;
+            color: #666;
+          }
+
+          .pop-btn {
+            font-size: 14px;
+            color: #8b5c3e;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-decoration: underline;
+
+            &:hover {
+              color: #5a3a29;
+            }
+          }
+        }
+      }
+
+      .r-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+
+        .price {
+          font-size: 20px;
+          font-weight: bold;
+          color: #333;
+
+          em {
+            display: inline-block;
+            margin-right: 5px;
+          }
+        }
+
+        // 예약하기 버튼
+        .btn-wrap {
+          .reserve-btn {
+            font-size: 16px;
+            color: #fff;
+            background-color: #8b5c3e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px; // 아이콘과 텍스트 간격
+            transition: background-color 0.3s ease; // 부드러운 hover 효과
+
+            &:hover {
+              background-color: #5a3a29; // hover 색상 변경
+            }
+
+            i {
+              font-size: 14px; // 아이콘 크기
+            }
+          }
+        }
+      }
+    }
+  }
+}

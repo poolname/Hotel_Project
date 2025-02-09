@@ -1,0 +1,282 @@
+.container {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+
+    .title {
+        margin: 25px 0px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .fa-star {
+        color: red;
+        position: relative;
+        top: -10px;
+        right: -5px;
+        font-size: 7px;
+    }
+
+    .board-nav {
+        height: 50px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        line-height: 50px;
+        background-color: #faf8f4;
+        .post-title {
+            text-align: center;
+        }
+        &.my-page {
+            line-height: 30px;
+        }
+    }
+
+    .post {
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        line-height: 50px;
+        border-bottom: 1px solid #ccc;
+        .post-title:hover {
+            font-weight: 600;
+        }
+    }
+
+    .post-num {
+        width: 10%;
+        text-align: center;
+    }
+
+    .post-title {
+        width: 70%;
+        text-align: center;
+        padding-left: 20px;
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    .post-writer,
+    .post-date {
+        width: 10%;
+        text-align: center;
+    }
+
+    .search-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+
+        .btn-wrap {
+            width: 100px;
+            margin-left: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #333;
+        }
+    }
+
+    .search {
+        width: 300px;
+        height: 40px;
+        margin: 10px;
+        color: #ccc;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        display: flex;
+        overflow: hidden;
+
+        a {
+            height: 100%;
+        }
+
+        input {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+        }
+
+        span {
+            color: #aaa;
+            font-weight: 600;
+            line-height: 35px;
+            margin-right: 10px;
+        }
+    }
+}
+
+// 반응형
+@media screen and (max-width: 1240px) {
+    .container {
+        .title {
+            margin: 25px 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .board-nav {
+            height: 50px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            line-height: 50px;
+            background-color: #faf8f4;
+            .post-num {
+                display: none;
+                width: 10%;
+                text-align: center;
+            }
+
+            .post-title {
+                width: 50%;
+                text-align: center;
+            }
+
+            .post-writer,
+            .post-date {
+                width: 20%;
+                text-align: center;
+            }
+        }
+
+        .post {
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            line-height: 50px;
+            border-bottom: 1px solid #ccc;
+
+            .post-num {
+                display: none;
+                width: 10%;
+                text-align: center;
+            }
+
+            .post-title {
+                width: 50%;
+                text-align: left;
+                .post-title:hover {
+                    font-weight: 600;
+                }
+                a {
+                    white-space: nowrap;
+                    display: block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .post-writer,
+            .post-date {
+                width: 20%;
+                text-align: center;
+            }
+        }
+
+        .search-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+
+            .btn-wrap {
+                width: 20%;
+                max-width: 100px;
+            }
+
+            .btn {
+                width: 100%;
+                background-color: #333;
+            }
+        }
+
+        .search {
+            width: 50%;
+            max-width: 300px;
+            height: 40px;
+            margin: 10px;
+            color: #ccc;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            display: flex;
+            overflow: hidden;
+
+            a {
+                height: 100%;
+            }
+
+            input {
+                display: inline-block;
+                width: 100%;
+                padding: 10px;
+            }
+
+            span {
+                color: #aaa;
+                font-weight: 600;
+                line-height: 35px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        .board-nav {
+            display: none;
+        }
+
+        .post {
+            height: auto;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+
+            .post-title {
+                width: 100%;
+                text-align: left;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 0;
+                line-height: 1.2;
+
+                a {
+                    white-space: nowrap;
+                    display: block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    padding-top: 20px;
+                }
+            }
+
+            .post-writer {
+                width: auto;
+                display: inline-block;
+                text-align: left;
+                font-size: 12px;
+                color: #666;
+                margin-left: 20px !important;
+            }
+            .post-date {
+                width: auto;
+                display: inline-block;
+                text-align: left;
+                font-size: 12px;
+                color: #666;
+                margin-left: 0px !important;
+            }
+
+            .post-writer::after {
+                content: ' | ';
+                margin: 0 2px;
+                color: #ccc;
+            }
+        }
+    }
+}

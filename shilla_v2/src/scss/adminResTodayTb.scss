@@ -1,0 +1,50 @@
+.cont4 {
+  // 테이블 스타일 설정
+  table {
+    width: 100%;
+    margin: 15px auto; // 테이블 가운데 정렬 및 위아래 여백
+    border-collapse: collapse;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    &:first-of-type {
+      margin-bottom: 50px;
+    }
+
+    caption {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    thead {
+      background-color: #777;
+      color: white;
+    }
+    tbody {
+      background-color: #fff;
+    }
+
+    td {
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    th {
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      font-weight: bold;
+    }
+
+    tr:nth-child {
+      background-color: #f1f1f1; // 짝수 행 배경색
+    }
+
+    td {
+      color: #555;
+      text-align: center;
+    }
+  }
+
+}

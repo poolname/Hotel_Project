@@ -1,0 +1,496 @@
+@charset "UTF-8";
+
+//추천상품
+// .pkg-wrapper {
+//     width: 1024px;
+//     margin: 0 auto;
+// }
+// .pkg-wrapper {
+//     width: 100%;
+//     min-width: 1420px;
+// }
+.rec-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // background-color: #ffa;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.rec-section {
+    width: 450px;
+    height: 290px;
+    position: relative;
+    // background-color: #faf;
+    border-radius: 15px;
+    overflow: hidden;
+    .img-wrap > img {
+        width: 450px;
+        height: 290px;
+        display: block;
+    }
+}
+.rec-section a .img-wrap img {
+    transition: transform 1s ease;
+}
+
+.rec-section a:hover .img-wrap img {
+    transform: scale(1.1);
+}
+
+.txt-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    h2 {
+        position: absolute;
+        top: 210px;
+        left: 20px;
+    }
+    p {
+        position: absolute;
+        top: 240px;
+        left: 20px;
+    }
+}
+.rec-page {
+    display: inline-block;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 54px;
+    top: 300px;
+    left: 480px;
+    width: 60px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 0.6rem;
+}
+
+//필터컨테이너
+.pkg-filter-box-wrapper {
+    display: block;
+    // background-color: #faf;
+}
+
+.pkg-filter-box {
+    height: 250px;
+    display: flex;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+}
+.pkg-datepicker-box,
+.pkg-filter-sort,
+.pkg-filter-keyword {
+    padding: 20px 20px 20px 20px;
+    p {
+        margin-bottom: 20px;
+    }
+}
+//데이트피커
+.pkg-datepicker-box {
+    width: 30%;
+    height: 150px;
+    margin: 30px;
+    // background-color: #aaa;
+}
+.pkg-datepicker {
+    width: 250px;
+    height: 25px;
+    padding-left: 5px;
+    color: #333333;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+    cursor: pointer;
+}
+.ui-datepicker-trigger {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    top: 6px;
+    width: 20px;
+    background-color: #fff;
+}
+.ui-datepicker {
+    width: 300px !important;
+    height: 280px; // tr이 추가될때 height 늘릴방법 고민!
+    padding: 5px !important;
+}
+.ui-datepicker-prev {
+    margin: 7px 0 0 60px;
+    position: 5px 8px;
+    left: 50%;
+}
+.ui-datepicker-next {
+    margin: 7px 60px 0 0;
+}
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+    background-color: transparent !important;
+    border: none !important;
+}
+// .ui-icon {
+//     background: none !important;
+// }
+// .ui-datepicker-prev {
+//     background: url("../../img/icon/arrow_left.png");
+//     background-color: transparent;
+//     background-size: 30px 30px;
+//     background-position: center center;
+//     text-indent: -9999px;
+//     background-position: 5px 8px;
+// }
+.ui-datepicker thead th {
+    padding-bottom: 6px !important;
+}
+.ui-state-default.ui-state-active {
+    background-color: #333333 !important;
+    color: #fff !important;
+    border-radius: 100%;
+    line-height: 2;
+}
+.ui-datepicker-calendar > thead > tr > th:first-child,
+.ui-datepicker-calendar > tbody > tr > td:first-child a {
+    color: red;
+}
+
+.ui-datepicker-calendar > thead > tr > th:last-child,
+.ui-datepicker-calendar > tbody > tr > td:last-child a {
+    color: #0099ff;
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    cursor: pointer;
+}
+.ui-datepicker-header {
+    background-color: transparent !important;
+    border: none !important ;
+    padding: 10px !important;
+    font-size: 17px;
+    margin: 0;
+}
+.ui-datepicker-calendar > tbody > tr > td > a,
+.ui-datepicker-calendar > thead > tr > th > span {
+    background-color: transparent !important;
+    border: none !important;
+    text-align: center;
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 2;
+}
+.ui-datepicker-calendar > thead > tr > th,
+.ui-datepicker-calendar > tbody > tr > td {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 5px 5px 0 6px;
+}
+.pkg-filter-sort {
+    width: 20%;
+    height: 150px;
+    margin: 30px 0 30px 30px;
+    // background-color: #aaf;
+}
+.pkg-filter-keyword {
+    width: 40%;
+    height: 250px;
+    // background-color: #faf;
+    .keword-wrap {
+        // background-color: #0af;
+        height: 150px;
+        margin: 30px 0 30px 0;
+        border-right: 1px solid #ddd;
+        // padding: 0 40px 0 0;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        li {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            // border: 2px solid #ddd;
+            // border-radius: 10px;
+            text-align: center;
+            margin: {
+                right: 20px;
+                bottom: 10px;
+            }
+            &:nth-of-type(5) {
+                margin-left: 40px;
+            }
+            input[type="checkbox"] {
+                display: none;
+            }
+            label {
+                display: inline-block;
+                background-color: #fff;
+                border: 1px solid #333;
+                border-radius: 5px;
+                width: 100%;
+                height: 100%;
+                line-height: 1.8rem;
+            }
+            input[type="checkbox"]:checked + label {
+                color: #ddd;
+                background-color: #333;
+            }
+        }
+    }
+}
+.pkg-btnbox {
+    width: 10%;
+    height: 250px;
+    // background-color: #cac;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 80px;
+    align-items: center;
+}
+.pkg-filter-resetbtn,
+.pkg-filter-searchbtn {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.pkg-filter-searchbtn {
+    color: #fff;
+    background-color: #333333;
+}
+//드롭다운
+.pkg-section {
+    height: 50px;
+    margin: 20px 0;
+    padding: 10px 0 10px 0;
+    // background-color: #aff;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.pkg-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: #ccc;
+    width: 100%;
+    height: 2px;
+}
+.pkg-total {
+    height: 30px;
+    line-height: 2.5;
+    // background-color: #ccc;
+}
+.dropdown {
+    width: 130px;
+    display: inline-block;
+    position: relative;
+}
+.sortbox,
+.typebox {
+    height: 30px;
+    background: url(../../img/icon/icn_collps01.png) no-repeat right 10px center;
+    background-size: 10px auto;
+    padding-left: 5px;
+    line-height: 2;
+    cursor: pointer;
+}
+.typebox {
+    border-bottom: 1px solid #ddd;
+}
+.sortbox {
+    border: 1px solid #ddd;
+}
+.dropdown-item-sort,
+.dropdown-item-type {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    z-index: 1;
+    width: 130px;
+    list-style: none;
+    position: absolute;
+    display: none;
+}
+.dropdown.on > .dropdown-item-sort,
+.dropdown.on > .dropdown-item-type {
+    display: block;
+}
+.dropdown.on > .sortbox,
+.dropdown.on > .typebox {
+    background-image: url(../../img/icon/icn_collps02.png);
+}
+
+.dropdown-item-sort > li,
+.dropdown-item-type > li {
+    padding: 10px 0 5px 5px;
+    height: 30px;
+    line-height: 1;
+}
+
+.dropdown-item-sort > li:hover,
+.dropdown-item-type > li:hover {
+    background-color: #333;
+    color: #fff;
+}
+//패키지상품리스트
+.pkg-list-box {
+    width: 1480px;
+    height: 100%;
+    // background-color: #aaa;
+}
+.pkg-list-box > ul {
+    li {
+        padding: 0;
+        display: inline-block;
+        width: 680px;
+        margin-right: 55px;
+        // background-color: #faa;
+        a {
+            display: inline;
+        }
+    }
+    // li:nth-of-type(2n + 1) {
+    //     margin-right: 55px;
+    // }
+}
+
+.list-container {
+    // display: block;
+    position: relative;
+    width: 100%;
+    .img-wrapper {
+        // width: 100%;
+        display: block;
+        height: 420px;
+        img {
+            display: block;
+            width: 680px;
+            height: 400px;
+            // object-fit: cover;
+        }
+    }
+    dt {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+    dd,
+    .pkg-date,
+    .pkg-pay {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
+        // background-color: #aaf;
+    }
+    .list-keword {
+        display: inline-block;
+        width: 90px;
+        height: 100%;
+        padding: 10px;
+        color: #fff;
+        background-color: #1f453a;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .pmt {
+        background-color: #d20a10;
+        color: #fff;
+    }
+    dd:nth-last-of-type(1) {
+        height: 30px;
+    }
+    .pkg-pay {
+        font-size: 1.3rem;
+        color: #ccc;
+        margin-bottom: 20px;
+    }
+    .pkg-rewards {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        background-color: #7a6c64;
+        padding: 6px;
+        font-size: 11px;
+        text-align: center;
+        display: inline-block;
+        img {
+            width: 34px;
+        }
+        span {
+            color: #fff;
+            display: block;
+        }
+    }
+}
+//페이지네이션
+.page-container {
+    width: 100%;
+    height: 50px;
+    // background-color: #aff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 20px 0;
+}
+.pkg-paging button {
+    margin-right: 10px;
+    font-size: 15px;
+}
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.pagepng {
+    background-image: url("../../img/common/bg_pageination.png");
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: #fff;
+}
+
+#first-page {
+    background-position: 0 0;
+}
+
+#prev-page {
+    background-position: 0 -25px;
+}
+
+#next-page {
+    background-position: 0 -50px;
+}
+
+#last-page {
+    background-position: 0 -75px;
+}
+// .page-container {
+//     height: 40px;
+//     background-color: #0af;
+//     .pkg-paging {
+//         display: flex;
+//         justify-content: center;
+//     }
+//     button {
+//         display: inline-block;
+//         width: 30px;
+//         height: 40px;
+//         align-items: center;
+//     }
+//     .active {
+//         font-size: large;
+//         text-decoration: underline;
+//     }
+// }
+.xx {
+    height: 100px;
+    background-color: #7a6c64;
+}

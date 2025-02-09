@@ -1,0 +1,175 @@
+/* 하단영역 */
+footer {
+    display: flex; 
+    justify-content: center; 
+    border-top: 1px solid #eaeaea;
+
+    .center {
+        display: flex; 
+        justify-content: space-between;
+        padding: 70px 0 120px;
+    }
+
+    .f_menu {
+        font-size: 14px; 
+        line-height: 3; 
+        font-family: 'Roboto', sans-serif; 
+        font-weight: 700;
+
+        .footer-logo {
+            margin-bottom: 25px; 
+            width: 200px;
+        }
+
+        & > ul {
+            display: flex;
+            li {
+                margin-right: 20px;
+                a {
+                    color: #000;
+                }
+            }
+
+        } 
+
+        .sns {
+            margin:10px 0 30px;
+
+            li {
+                a {
+                    display: block; 
+                    width: 50px; 
+                    height: 50px; 
+                    border-radius: 50%; 
+                    border: 1px solid #ccc; 
+                    text-align: center; 
+                    line-height: 50px;
+                    &:hover {
+                        box-shadow: 0 0 7px rgba(0,0,0,0.2);
+                    }
+                    i {
+                        font-size: 15px;
+                    }
+                }
+                &:nth-child(1) a i {
+                    font-size: 20px; 
+                    position: relative; 
+                    top: 2px;
+                }
+            }
+        }
+
+        .menu {
+            font-family: 'Arimo', sans-serif; 
+            font-weight: 600; 
+            font-size: 15px; 
+            flex-wrap: wrap;
+            li:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .f_bot {
+        font-family: 'Poppins', sans-serif;
+        .f_list {
+            font-size: 14px; 
+            line-height: 2.5; 
+            font-family: 'Roboto', sans-serif; 
+            font-weight: 700;
+            span {
+                margin-right: 30px;
+                &:hover {
+                    text-decoration: underline;
+                }
+                &::after {
+                    content: ""; 
+                    display: inline-block; 
+                    width: 1px; 
+                    height: 15px; 
+                    background: #999; 
+                    position: relative; 
+                    top: 2px; 
+                    left: 15px;
+                }
+                &:last-child::after {
+                    display: none;
+                }
+                a {
+                    color: #000;
+                }
+            }
+        }
+        .f_info {
+            color: #777; 
+            list-style: disc inside; 
+            font-size: 12px; 
+            line-height: 2; 
+            letter-spacing: 0.5px; 
+            margin: 20px 0 30px;
+        }
+        .copy span {
+            font-size: 16px; 
+            position: relative; 
+            top: 1px;
+        }
+    }
+
+    .info {
+        padding-top: 10px;
+        font-size: 12px; 
+        line-height: 1.7; 
+        font-family: 'Roboto', sans-serif; 
+
+        & > p {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 40px;
+            font-family: "Poppins", sans-serif;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 25px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            &:nth-of-type(1)::before {
+                background-image: url(../../public/img/main/mark-seoul-1.jpg);
+            }
+            &:nth-of-type(2)::before {
+                background-image: url(../../public/img/main/mark-seoul-2.jpg);
+            }
+            &:nth-of-type(3)::before {
+                background-image: url(../../public/img/main/mark-seoul-3.jpg);
+            }
+            &:nth-of-type(4)::before {
+                background-image: url(../../public/img/main/mark-seoul-4.jpg);
+            }
+            &:nth-of-type(5)::before {
+                background-image: url(../../public/img/main/mark-seoul-5.jpg);
+            }
+        }
+    }
+}
+
+
+// 반응형
+@media screen and (max-width:768px){
+    footer {
+    
+        .center {
+            flex-direction: column;
+            padding-left: 20px;
+        }
+    
+        .f_bot {
+            order: 3;
+        }
+
+    }
+}

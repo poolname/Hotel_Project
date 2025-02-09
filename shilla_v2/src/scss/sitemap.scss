@@ -1,0 +1,80 @@
+.sitemap-wrap {
+    width: 100%;
+    .sitemap.top {
+        padding-top: 20px;
+    }
+    .sitemap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 70px;
+        border-bottom: 1px solid #ddd;
+        .map-list {
+            // background-color: #faf;
+            width: 220px;
+            padding-left: 20px;
+            .map-title {
+                border-bottom: 2px solid #7a6c64;
+                line-height: 3;
+                font-weight: 700;
+            }
+            h3 {
+                margin-top: 22px;
+                margin-bottom: 10px;
+            }
+            & a {
+                display: block;
+                // margin-bottom: 10px;
+            }
+            .item-bar {
+                position: relative;
+                padding-left: 15px;
+                line-height: 1.5;
+                &::before {
+                    content: "-";
+                    position: absolute;
+                    left: 2px;
+                }
+            }
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// 태블릿
+@media screen and (max-width: 1240px) {
+    .sitemap-wrap {
+        .sitemap {
+            padding: 70px 0;
+        }
+        .sitemap.top {
+            padding-top: 0px;
+            .map-list {
+                width: 200px;
+            }
+        }
+    }
+}
+// 모바일
+@media screen and (max-width: 768px) {
+    .sitemap-wrap {
+        .sitemap {
+            .map-list {
+                // background-color: #faf;
+                width: 160px;
+                .map-title {
+                    font-size: 2.6vw;
+                }
+                h3 {
+                    font-size: 2.2vw;
+                    font-weight: 600;
+                }
+                & a {
+                    font-size: 1.9vw;
+                }
+            }
+        }
+    }
+}

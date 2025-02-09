@@ -1,0 +1,65 @@
+.cont6 {
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .filter-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .filters {
+            display: flex;
+            gap: 9px;
+
+            label {
+                display: flex;
+                align-items: center; 
+                font-weight: bold;
+            }
+
+            select {
+                padding: 5px;
+                font-size: 14px;
+                margin-right: 10px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+        }
+
+        .total-price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        thead {
+            background-color: #777;
+            font-weight: bold;
+            color: #fff;
+        }
+        tbody {
+            background: #fff;
+        }
+
+        tfoot {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+    }
+}

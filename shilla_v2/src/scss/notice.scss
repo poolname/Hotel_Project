@@ -1,0 +1,306 @@
+.container {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    .Ntitle {
+        margin: 25px 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .Nboard-nav,
+    .listwrap {
+        height: 50px;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        line-height: 50px;
+        background-color: #faf8f4;
+        border-bottom: 1px solid #ddd;
+    }
+    .Nboard-nav {
+        font-weight: bold;
+        border: none;
+    }
+
+    .listwrap {
+        background-color: transparent;
+    }
+
+    .N-num {
+        width: 10%;
+        text-align: center;
+        // background-color: #aff;
+    }
+    .N-title {
+        width: 60%;
+        text-align: center;
+        padding-left: 20px;
+        .Nlink {
+            white-space: nowrap;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        :hover {
+            font-weight: 600;
+        }
+    }
+    .N-option,
+    .N-view,
+    .N-date {
+        width: 10%;
+        text-align: center;
+    }
+
+    //<Noticesearch>
+    .Nsearch-wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 0;
+        background-color: #faf8f4;
+        padding: 20px;
+    }
+
+    .Nform {
+        width: 50%;
+        height: 40px;
+        margin: 10px;
+        color: #ccc;
+        display: flex;
+        // justify-content: space-between;
+        display: flex;
+        gap: 10px;
+        line-height: 40px;
+
+        //셀렉트박스
+        .dropdown {
+            width: 20%;
+            display: inline-block;
+            position: relative;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .typebox {
+            appearance: none;
+            height: 30px;
+            background: url(../../public/img/icon/icn_collps01.png) no-repeat
+                right 10px center;
+            background-size: 10px auto;
+            padding-left: 8px;
+            line-height: 2;
+            cursor: pointer;
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            line-height: 2.8;
+            border: 1px solid #ddd;
+        }
+
+        .dropdown-item-type {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            z-index: 1;
+            width: 100%;
+            list-style: none;
+            position: absolute;
+            display: none;
+        }
+
+        .dropdown.on > .dropdown-item-type {
+            display: block;
+        }
+
+        .dropdown.on > .typebox {
+            background-image: url(../../public/img/icon/icn_collps02.png);
+        }
+
+        .dropdown-item-type > li {
+            padding: 10px 0 8px 8px;
+            height: 30px;
+            line-height: 1;
+        }
+
+        .dropdown-item-type > li:hover {
+            background-color: #7a6c64;
+            color: #fff;
+        }
+        .Nfilter {
+            // margin-left: 10%;
+            width: 90px;
+            height: 40px;
+            border: 1px solid #ccc;
+            padding: 0 10px;
+            border-radius: 4px;
+        }
+
+        .search-bar {
+            flex: 4;
+            // min-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .s-btn {
+            width: 60px;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            background-color: #7a6c64;
+            margin-right: 10px;
+            border-radius: 4px;
+            padding: 0 10px;
+            // border: 1px solid #ccc;
+        }
+    }
+}
+// 반응형
+@media screen and (max-width: 1240px) {
+    .container {
+        .Ntitle {
+            margin: 25px 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .Nboard-nav {
+            height: 50px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            line-height: 50px;
+            background-color: #faf8f4;
+            .N-num {
+                display: none;
+            }
+            .N-title {
+                width: 60%;
+                text-align: center;
+            }
+            .N-option,
+            .N-view,
+            .Nt-date {
+                width: 10%;
+                text-align: center;
+            }
+        }
+
+        .Nboard {
+            .listwrap {
+                height: 50px;
+                display: flex;
+                justify-content: space-around;
+                line-height: 50px;
+                border-bottom: 1px solid #ccc;
+                .N-num {
+                    display: none;
+                }
+
+                .N-title {
+                    width: 60%;
+                    text-align: left;
+                    .N-title:hover {
+                        font-weight: 600;
+                    }
+                }
+                .N-option,
+                .N-view,
+                .N-date {
+                    width: 10%;
+                    text-align: center;
+                }
+            }
+        }
+        // .Nform {
+        //     .dropdown {
+        //         width: 20%;
+        //     }
+
+        //     .dropdown-item-type {
+        //         width: 100px;
+        //     }
+        // }
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        .Nboard-nav {
+            display: none;
+        }
+        .Nboard {
+            .listwrap {
+                height: auto;
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid #ccc;
+                .N-option {
+                    width: 50px;
+                    margin-top: 10px;
+                    color: #fff;
+                    background-color: #ac9b8a;
+                    line-height: 1.7;
+                    border-radius: 3px;
+                    font-weight: 500;
+                    // border: 1px solid #333;
+                    // color: #fff;
+                }
+                .N-title {
+                    width: 100%;
+                    text-align: left;
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 1.2;
+                    padding-left: 0;
+                    .Nlink {
+                        white-space: nowrap;
+                        display: block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        padding-top: 20px;
+                    }
+                }
+                .N-view {
+                    width: 68px;
+                    display: inline-block;
+                    font-size: 12px;
+                    color: #666;
+                    // margin-left: 2px !important;
+                    background: url(../../public/img/icon/icons_view.png)
+                        no-repeat left 0px center;
+                    background-size: 22%;
+                    padding-left: 22px;
+                    text-align: left;
+                }
+                .N-date {
+                    width: auto;
+                    display: inline-block;
+                    font-size: 12px;
+                    color: #666;
+                    margin-left: 0px !important;
+                }
+
+                .N-date::before {
+                    content: " | ";
+                    margin-right: 10px;
+                    color: #ccc;
+                }
+            }
+        }
+        .listwrap {
+            text-align: left;
+        }
+        .Nsearch-wrap {
+            width: 100%;
+            .Nform {
+                width: 100%;
+            }
+        }
+    }
+}

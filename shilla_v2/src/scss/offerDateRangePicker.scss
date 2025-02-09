@@ -1,0 +1,59 @@
+.date-picker-input {
+    width: auto;
+    height: 50px;
+    padding: 2px; /* 내부 여백 */
+    font-size: 25px; /* 텍스트 크기 */
+    // border: 1px solid #ccc;
+    // border-radius: 4px;
+    // outline: none;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .date-picker-popup {
+    position: fixed; /* 화면 전체 기준으로 위치 설정 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 화면 중앙 정렬 */
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+    
+    .date-picker-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+    }
+    
+    .selected-dates p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+    
+    .footer-buttons button {
+      padding: 8px 16px;
+      margin-left: 8px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .cancel-button {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    
+    .confirm-button {
+      background-color: #007bff;
+      color: white;
+    }
+
+    body {
+        overflow: auto; /* DatePicker가 스크롤을 막지 않도록 설정 */
+      }
+    

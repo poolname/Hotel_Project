@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+
+    .faq {
+        margin: 25px 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .text-container {
+        .title {
+            box-sizing: border-box;
+            display: block;
+            margin: 10px 0;
+            padding: 20px;
+            font-weight: bold;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .content {
+            box-sizing: border-box;
+            min-height: 200px;
+            margin: 10px 0;
+            padding: 20px;
+            overflow: auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            resize: none;
+        }
+    }
+
+    .post-list {
+        align-items: center;
+        margin-top: 50px;
+
+        .board-nav {
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            line-height: 40px;
+            background-color: #eaeaea;
+
+            .post-num {
+                width: 10%;
+            }
+
+            .post-title {
+                width: 70%;
+            }
+
+            .post-writer,
+            .post-date {
+                width: 10%;
+            }
+        }
+
+        .post {
+            display: flex;
+            line-height: 40px;
+            border-bottom: 1px solid #ccc;
+            justify-content: space-between;
+
+            .post-num {
+                width: 10%;
+                text-align: center;
+            }
+
+            .post-title {
+                width: 70%;
+                text-align: center;
+                &:hover {
+                    font-weight: 600;
+                }
+                a {
+                    display: block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .post-writer,
+            .post-date {
+                width: 10%;
+                text-align: center;
+            }
+        }
+    }
+    .list {
+        width: 100px;
+        padding: 10px;
+        margin-top: 30px;
+        font-size: 14px;
+        text-align: center;
+        background-color: #7a6c64;
+        color: #fff;
+        border-radius: 5px;
+    }
+}
+
+// 반응형
+@media screen and (max-width: 1240px) {
+    .container {
+        .post-list {
+            align-items: center;
+            margin-top: 50px;
+
+            .board-nav {
+                .post-num {
+                    width: 10%;
+                }
+
+                .post-title {
+                    width: 50%;
+                }
+
+                .post-writer,
+                .post-date {
+                    width: 20%;
+                }
+            }
+
+            .post {
+                .post-num {
+                    width: 10%;
+                    text-align: center;
+                }
+
+                .post-title {
+                    width: 50%;
+                    text-align: center;
+                    &:hover {
+                        font-weight: 600;
+                    }
+                }
+
+                .post-writer,
+                .post-date {
+                    width: 20%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        .post-list {
+            .post {
+                line-height: 70px;
+            }
+        }
+    }
+}

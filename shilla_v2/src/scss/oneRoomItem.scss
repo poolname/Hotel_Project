@@ -1,0 +1,63 @@
+.room-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .room-type {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+    }
+    .btn {
+      padding: 8px 12px;
+      background: #777;
+      color: #fff;
+      border-radius: 4px;
+    }
+  }
+  
+  .room-item-image img {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+  }
+  
+  .room-item-info {
+    margin-left: 20px;
+  }
+  
+  .room-item-type {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .room-item-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .room-item-price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .room-item-book-btn {
+    background-color: #6c4e2f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .room-item-book-btn:hover {
+    background-color: #553628;
+  }
+  

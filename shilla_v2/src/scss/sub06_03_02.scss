@@ -1,0 +1,335 @@
+.container.board {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+
+    .ask {
+        margin: 25px 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .text-container {
+        .title-wrap {
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 20px 30px;
+                border: 1px solid #e0e0e0;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                .subject {
+                    font-size: 16px;
+                    font-weight: 800;
+                    text-align: left;
+                }
+                .writer-wrap {
+                    .writer,
+                    .submit-time {
+                        text-align: right;
+                        line-height: 1.7;
+                    }
+                }
+            }
+        }
+
+        .content {
+            box-sizing: border-box;
+            height: 400px;
+            overflow: auto;
+            line-height: 1.7;
+            padding: 20px 30px;
+            overflow: auto;
+            border: 1px solid #e0e0e0;
+            border-top: none;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .reply-container {
+            margin-top: 20px;
+            width: 100%;
+            z-index: 1;
+
+            .reply-title {
+                display: flex;
+                margin: 25px 0 10px 5px;
+                font-size: 22px;
+                font-weight: 600;
+                color: #333;
+            }
+
+            .reply-box,
+            .reply-box-sec {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                .reply-content,
+                .reply-content-ing {
+                    line-height: 50px;
+                    background-color: #eaeaea;
+
+                    .user-name,
+                    .name {
+                        width: 60px;
+                        line-height: 35px;
+                        padding: 10px 20px;
+                        font-size: 14px;
+                        font-weight: 800;
+                        margin-top: 5px;
+                    }
+                }
+                .textarea {
+                    padding: 10px;
+                    .new-reply {
+                        display: flex;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        height: 150px;
+                        padding: 10px 20px;
+                        border: none;
+                        font-size: 14px;
+                        line-height: 18px;
+                        resize: none;
+                        box-sizing: border-box;
+                        line-height: 1.7;
+                        &::-webkit-scrollbar {
+                            width: 10px;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background: #bababa; /* 스크롤바 색상 */
+                            border-radius: 10px; /* 스크롤바 둥근 테두리 */
+                        }
+                        &::-webkit-scrollbar-track {
+                            background: #eaeaea; /*스크롤바 뒷 배경 색상*/
+                        }
+                    }
+                }
+                #reply {
+                    display: flex;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                    height: 150px;
+                    padding: 10px 20px;
+                    border: none;
+                    font-size: 14px;
+                    line-height: 18px;
+                    resize: none;
+                    box-sizing: border-box;
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: #bababa; /* 스크롤바 색상 */
+                        border-radius: 10px; /* 스크롤바 둥근 테두리 */
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: #eaeaea; /*스크롤바 뒷 배경 색상*/
+                    }
+                }
+                .reply-info {
+                    margin-top: 100px;
+                    align-content: center;
+                    text-align: end;
+                    padding: 10px;
+                    margin-bottom: 5px;
+                    .time {
+                        text-align: right;
+                        justify-content: right;
+                        font-size: 14px;
+                        color: #bbb;
+                        padding-right: 10px;
+                    }
+                    .edit,
+                    .delete,
+                    #plus {
+                        text-align: right;
+                        justify-content: right;
+                        font-size: 14px;
+                        color: #333;
+                        font-weight: 600;
+                        padding: 0 10px 5px 0;
+                    }
+                }
+            }
+        }
+
+        .reply-text {
+            display: flex;
+            align-items: center;
+
+            .user-name {
+                display: inline-block;
+                width: 60px;
+                line-height: 35px;
+                padding: 10px;
+                font-size: 14px;
+            }
+            #reply {
+                flex: 1;
+                height: 30px;
+                padding: 5px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin: auto 10px;
+                &:focus {
+                    border-color: #7a6c64;
+                }
+            }
+
+            #plus {
+                height: 30px;
+                padding: 0 10px;
+                font-size: 14px;
+                background-color: #7a6c64;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.5s;
+                &:hover {
+                    background-color: #333;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.button-wrap {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+
+    .list {
+        box-sizing: border-box;
+        background: #7a6c64;
+        color: #fff;
+        border: 1px solid #7a6c64;
+        width: 100px;
+        padding: 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: #6a5b54;
+        }
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%; // 버튼 컨테이너의 너비를 100%로 설정
+        .edit {
+            box-sizing: border-box;
+            background: #333;
+            color: #fff;
+            border: 1px solid #333;
+            width: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: #555;
+                color: #fff;
+            }
+        }
+        .delete {
+            box-sizing: border-box;
+            background: #fff;
+            color: #333;
+            border: 1px solid #333;
+            width: 100px;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: #efefef;
+            }
+        }
+    }
+}
+
+.lypop-title {
+    background-color: #7a6c64;
+}
+
+//////////반응형//////////////
+@media screen and (max-width: 768px) {
+    .container.board {
+        .text-container {
+            .content {
+                padding: 10px 20px;
+            }
+            .title-wrap .title {
+                padding: 10px 20px;
+            }
+            .reply-container {
+                .reply-box {
+                    .reply-info {
+                        .edit,
+                        .delete {
+                            padding: 5px 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .button-wrap {
+            .button-container {
+                .edit {
+                    box-sizing: border-box;
+                    background: #333;
+                    color: #fff;
+                    border: 1px solid #333;
+                    width: 60px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s;
+                    &:hover {
+                        background-color: #555;
+                        color: #fff;
+                    }
+                }
+                .delete {
+                    box-sizing: border-box;
+                    background: #fff;
+                    color: #333;
+                    border: 1px solid #333;
+                    width: 60px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    transition: background-color 0.3s;
+                    &:hover {
+                        background-color: #efefef;
+                    }
+                }
+            }
+        }
+    }
+}
+.secret-wrap {
+    margin: 5px 0 30px;
+    font-size: 15px;
+    input {
+        margin-right: 10px;
+        width: 15px;
+        height: 15px;
+    }
+}

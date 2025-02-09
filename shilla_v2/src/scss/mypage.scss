@@ -1,0 +1,282 @@
+.container {
+    display: flex;
+    width: 100%;
+
+    .depth3-tab-wrap.my-page {
+        .tab {
+            li {
+                width: calc(100% / 3);
+            }
+        }
+    }
+
+    .content {
+        position: relative;
+        min-height: 220px;
+
+        .change-info-chk,
+        // .reservate-info,
+        .inquiry-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .change-info-chk {
+        display: flex;
+        margin-top: 0px;
+        label {
+            font-size: 24px;
+        }
+
+        #pw-chk,
+        #btn-confirm,
+        .pwdiv {
+            display: flex;
+            vertical-align: middle;
+            flex-direction: column;
+        }
+
+        #pw-chk {
+            width: 100%;
+            min-width: 300px;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+            display: block;
+
+            &:focus {
+                border-color: #333;
+            }
+        }
+
+        #btn-confirm {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            background-color: #7a6c64;
+            box-sizing: border-box;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+            margin-bottom: 0px;
+
+            &:hover {
+                background-color: #333;
+            }
+        }
+    }
+
+    .mypage-info {
+        display: block;
+        position: relative;
+        padding: 20px;
+        transform: none;
+        top: 0;
+        left: 0;
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .my-info {
+            width: 500px;
+            .info-group {
+                width: 400px;
+                .tel-num {
+                    select {
+                        padding: 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 5px;
+                        width: 100px;
+                    }
+                    input {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .my-info,
+        .user-info-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            line-height: 1.5;
+            margin: 0 auto 30px;
+            position: relative;
+            .pwcheck {
+                display: flex;
+                align-items: center;
+                p {
+                    width: 100px;
+                    text-align: left;
+                }
+            }
+            .error-msg {
+                position: absolute;
+                bottom: -25px;
+                left: 100px;
+                color: red;
+                width: max-content;
+            }
+
+            p {
+                width: 100px;
+                text-align: left;
+            }
+
+            label {
+                font-size: 16px;
+                color: #333;
+            }
+
+            input {
+                justify-content: center;
+                width: 400px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 14px;
+                box-sizing: border-box;
+                &.phone-num {
+                    width: 140px;
+                }
+            }
+            #userId,
+            #userName,
+            #userName_eng,
+            #userBirth {
+                background-color: #ddd;
+            }
+        }
+        .my-pw {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            line-height: 1.5;
+            margin: 0 auto 20px;
+            width: 500px;
+            #error-message2 {
+                color: red;
+                display: block;
+                text-align: left;
+                margin-left: 100px;
+                width: 100%;
+            }
+        }
+
+        .edit-btn,.withdrawal-btn {
+            display: block;
+            margin: 50px auto 20px;
+            width: 500px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #7a6c64;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #333;
+            }
+        }
+        .withdrawal-btn {
+            background-color: #bbb;
+            margin-top: 20px;
+        }
+    }
+}
+
+//반응형
+@media screen and (max-width: 768px) {
+    .container {
+        .content {
+            padding: 0;
+        }
+        .mypage-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            line-height: 1.5;
+            margin: 0 auto 20px;
+            padding: 0;
+            .my-info {
+                flex-wrap: nowrap;
+                .pwcheck {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    p {
+                        width: 70px;
+                        text-align: right;
+                        margin-right: 10px;
+                    }
+                    #error-message2 {
+                        color: red;
+                        display: block;
+                        text-align: left;
+                        margin-left: 80px;
+                        width: 100%;
+                    }
+                }
+                p {
+                    width: 70px;
+                    text-align: right;
+                    margin-right: 10px;
+                }
+                input {
+                    width: calc(100% - 70px);
+                }
+            }
+            #edit {
+                display: block;
+                margin: 50px auto;
+                width: 0;
+                min-width: 200px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #7a6c64;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+                &:hover {
+                    background-color: #333;
+                }
+            }
+            .my-pw {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                line-height: 1.5;
+                margin: 0 auto 20px;
+                width: calc(100% - 10px);
+                #error-message2 {
+                    color: red;
+                    display: block;
+                    text-align: left;
+                    margin-left: 70px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

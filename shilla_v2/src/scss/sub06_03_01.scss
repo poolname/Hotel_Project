@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+
+    .ask {
+        margin: 25px 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .text-container {
+        #title {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            margin: 10px auto;
+            padding: 20px 30px;
+            font-weight: bold;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 800;
+            text-align: left;
+        }
+        #content {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 500px;
+            line-height: 1.7;
+            margin: 10px auto;
+            padding: 20px 30px;
+            overflow: auto;
+            text-align: start;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            resize: none;
+        }
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            width: 100px;
+            margin-left: 10px;
+            padding: 10px;
+        }
+
+        #submit {
+            box-sizing: border-box;
+            background: #333;
+            color: #fff;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        #cancel {
+            box-sizing: border-box;
+            background: #fff;
+            color: #333;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+    }
+}
+
+//반응형
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+
+        .ask {
+            margin: 25px 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .text-container {
+            #title {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                margin: 10px auto;
+                padding: 20px 30px;
+                font-weight: bold;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                font-size: 16px;
+                font-weight: 800;
+                text-align: left;
+            }
+            #content {
+                box-sizing: border-box;
+                width: 100%;
+                min-height: 500px;
+                line-height: 1.7;
+                margin: 10px auto;
+                padding: 20px 30px;
+                overflow: auto;
+                text-align: start;
+                margin-top: 5px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                resize: none;
+            }
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 0px;
+
+            button {
+                width: 70px;
+                padding: 10px;
+            }
+
+            #submit {
+                box-sizing: border-box;
+                background: #333;
+                color: #fff;
+                border: 1px solid #333;
+                border-radius: 5px;
+            }
+
+            #cancel {
+                box-sizing: border-box;
+                background: #fff;
+                color: #333;
+                border: 1px solid #333;
+                border-radius: 5px;
+            }
+        }
+    }
+}
